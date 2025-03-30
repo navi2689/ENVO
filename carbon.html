@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Footprint Calculator</title>
+  <link rel="stylesheet" href="carbon.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Carbon Footprint Calculator</h1>
+    <p>Enter your daily activities to calculate your carbon footprint:</p>
+
+    <h2>Transportation</h2>
+
+    <label for="car">Car Distance(km):</label>
+    <input type="number" id="car" placeholder="Enter Km">
+
+    <label for="bus">Bus Distance(km):</label>
+    <input type="number" id="bus" placeholder="Enter Km">
+
+    <label for="motorcycle">Motorcycle Distance (km):</label>
+    <input type="number" id="motorcycle" placeholder="Enter Km">
+
+    <label for="bikeType">Motorcycle Type:</label>
+    <select id="bikeType">
+      <option value="small">Small (Under 150cc)</option>
+      <option value="medium">Medium (150cc-500cc)</option>
+      <option value="large">Large (500cc+)</option>
+    </select>
+
+    <label for="bicycle">Bicycle Distance (km):</label>
+    <input type="number" id="bicycle" placeholder="Enter Km">
+
+    <h2>Energy Consumption</h2>
+    <label for="electricity">Electricity (kWh):</label>
+    <input type="number" id="electricity" placeholder="Enter usage">
+
+    <label for="gas">Gas (cubic maters):</label>
+    <input type="number" id="gas" placeholder="Enter usage">
+
+    <h2>Diet</h2>
+    <label for="diet">Diet Type:</label>
+    <select id="diet">
+      <option value="7.5">Pescatarian (Fish-based)</option>
+      <option value="6.5">Vegetarian</option>
+      <option value="4.5">Vegan</option>
+      <option value="12.0">Meat</option>
+    </select>
+
+    <button id="calculate">Calculate</button>
+    <div class="progress-bar-container">
+      <div class="progress-bar"></div>
+    </div>
+
+    <div id="result"></div>
+    <div id="advice"></div>
+    <canvas id="carbonChart"></canvas>
+  </div>
+
+  <script src="carbon.js"></script>
+</body>
+</html>

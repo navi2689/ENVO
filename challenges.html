@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Goals</title>
+    <link rel="stylesheet" href="challenges.css">
+    <script defer src="challenges.js"></script>
+</head>
+<body>
+    <h1>Weekly Goals</h1>
+    
+    <!-- Table for Weekly Challenges -->
+    <table>
+        <thead>
+            <tr>
+                <th>Days</th>
+                <th>Plant a Tree</th>
+                <th>Walk/Bicycle</th>
+                <th>Consume Plant-Based Diet</th>
+                <th>Total Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+                days.forEach(day => {
+                    document.write(`
+                        <tr>
+                            <td>${day}</td>
+                            <td><input type="checkbox" class="plant-tree" data-day="${day}" onclick="handleTreeCheckbox('${day}')"></td>
+                            <td><input type="checkbox" class="walk-bicycle" data-day="${day}" onclick="handleWalkCheckbox('${day}')"></td>
+                            <td>
+                                <select id="diet-${day}" onchange="handleDietSelection('${day}')">
+                                    <option value="" selected disabled>Choose Diet</option>
+                                    <option value="vegan">Vegan</option>
+                                    <option value="vegetarian">Vegetarian</option>
+                                    <option value="pescatarian">Pescatarian</option>
+                                    <option value="omnivore">Omnivore</option>
+                                </select>
+                            </td>
+                            <td class="points" data-day="${day}">0</td>
+                        </tr>
+                    `);
+                });
+            </script>
+        </tbody>
+    </table>
+
+    <!-- GPS Section -->
+    <div id="gps-section" style="display: none;">
+        <h3>Enable GPS to Track Walk/Bicycle Activity</h3>
+        <button onclick="startGPSTracking()">Enable GPS</button>
+        <button id="stop-tracking-button" onclick="stopGPSTracking()">Stop Tracking</button>
+        <p id="gps-status"></p>
+    </div>
+
+    <!-- Upload Section -->
+    <div id="upload-section" style="display: none;">
+        <h3>Upload Image of Planted Tree</h3>
+        <input type="file" id="tree-image" accept="image/*">
+        <button onclick="validateImage()">Submit</button>
+    </div>
+
+    <!-- Rules Section -->
+    <p id="rules">Rules: Upload an image of a tree you planted, use GPS to confirm walking distance, and use the checkboxes to update your points.</p>
+</body>
+</html>

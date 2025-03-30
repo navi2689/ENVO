@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENVO</title>
+    <link rel="stylesheet" href="Page1.css">
+    <link rel="stylesheet" href="page2.css">
+    <script src="https://kit.fontawesome.com/43290fa92d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="page1">
+        <header>
+            <div
+             class="logo"><img src="logo.png" id="envo"></div>
+            <nav class="nav">
+                <a href="http://127.0.0.1:5500/Page1.html">Home</a>
+                <a href="#">About</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn con" >Contact</a>
+                    <div class="dropdown-content">
+                        <a href="#">navi2004si@gmail.com</a>
+                        <a href="#">90071XXXXX</a>
+                    </div>
+                </div>
+            </nav>
+            <div id="profile"><i class="fa-solid fa-user" ></i></div>
+        </header>
+        <div id="fakeHeader"></div>
+        <div id="page1">
+            <div class="box" id="box1"></div>
+            <p id="quote">"Together for a Greener Future 🌍"</p>
+            <p id="para1">Welcome! Our planet needs us now more than ever. Stay informed with real-time AQI updates, weather insights, and your carbon footprint tracker. Dive into challenges designed to make a difference—every step counts. Join us in shaping a sustainable tomorrow, starting today.</p>
+            <div class="box" id="box2"> 
+                <button class="button" id="button1">Watch Demo</button>
+            </div>
+            <p id="heading"><u>See How Its Works:</p>
+            <p id="para2">Discover how easy and impactful it is to make a difference. Watch our quick demo to explore features like AQI monitoring, weather forecasts, carbon footprint tracking, and engaging daily challenges. Take the first step towards a greener tomorrow</p>
+    <script src="page1.js"></script>
+    </div>
+    <div class="page2">
+        <div class="ripples"></div>
+        <div class="container">
+          <button id="ani" class="ani"><img src="earth.png">
+            <div class="OverText">Services</div>
+        </button>
+          <div class="text"></div>
+          <div class="card card1" onclick="openPage('carbon.html')">Carbon Footprint Calculator
+            <div class="halfbox"><img src="footprint.png"></div>
+          </div>
+          <div class="card card2" onclick="openPage('aqi.html')">AQI Index
+            <div class="halfbox"><img src="aqindex.png"></div>
+          </div>
+          <div class="card card3" onclick="openPage('weather.html')">Weather
+            <div class="halfbox"><img src="weatherimg.png"></div>
+          </div>
+          <div class="card card4" onclick="openPage('page3.html')">Challenges
+            <div class="halfbox"><img src="daily.png"></div>
+        </div>
+        
+    <script src="page2.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AQI Tracker</title>
+  <link rel="stylesheet" href="aqi.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Air Quality INdex (AQI) Tracker</h1>
+
+    <div class="search-box">
+      <input type="text" id="city" placeholder="Enter city name">
+      <button id="search-btn">Check AQI</button>
+      <div class="aqi-result">
+        <h2 id="location">City: -</h2>
+        <p id="aqi-value">AQI: -</p>
+        <p id="status">Status: -</p>
+      </div>
+
+      <p class="note">* Data fetched from the World Air Quality Index (WAQI)</p>
+    </div>
+  </div>
+  <script src="aqi.js"></script>
+</body>
+</html>

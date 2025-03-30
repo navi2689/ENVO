@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0, 0.2);
+}
+
+h1 {
+  color: #27ae60;
+  font-size: 24px;
+}
+
+.search-box {
+  margin: 20px 0;
+}
+
+input {
+  width: 70px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #27ae60;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #219150;
+}
+
+.aqi-result {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+}
+
+.note {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Color codes for different AQI levels */
+.good {background: #2ecc71; color: white;}
+.moderate {background: #f1c40f; color: black;}
+.unhealthy-sensitive {background: #e67e22; color: white;}
+.unhealthy {background: #e74c3c; color: white;}
+.very-unhealthy {background: #8e44ad; color: white;}
+.hazardous {background: #7f0000; color: white;}
